@@ -1,6 +1,16 @@
+@font-face {
+  font-family: 'Kefa'; /*a name to be used later*/
+  src: url('FontsFree-Net-Kefa-Regular-3.ttf'); /*URL to font*/
+}
+
+@font-face {
+  font-family: 'Savoye'; /*a name to be used later*/
+  src: url('Savoye.ttf'); /*URL to font*/
+}
+
 body {
 	margin: 0;
-  font-family: 'Merriweather', serif;
+  font-family: 'Kefa', sans-serif;
 }
 
 #wrap {
@@ -13,27 +23,34 @@ section {
 	position: relative;
 	height: 100vh;
 	overflow: hidden;
-	font-size: 10vmin;
+	/* font-size: 10vmin; */
 	padding: 1em;
-	color: hsla(0, 0%, 100%, .8);
   background-position: center center;
   background-size: cover;
+  text-align: center;
+  /* line-height: 50vh; */
 }
 
+h2 {
+  	font-size: 10vmin;
+}
+h3 {
+  font-size: 6vmin;
+}
 section:first-child {
-  background-image: url('https://source.unsplash.com/Bj_MIJ3vpT4/1920x1080');
+  /* background-color:whitesmoke; */
 }
 
 section:nth-child(2) {
-  background-image: url('https://source.unsplash.com/jWskS_wLMDo/1920x1080');
+  /* background-color: rgb(255, 255, 255); */
 }
 
 section:nth-child(3) {
-  background-image: url('https://source.unsplash.com/O6vaYviRDoo/1920x1080');
+  /* background-color: rgb(255, 255, 255); */
 }
 
 section:nth-child(4) {
-  background-image: url('https://source.unsplash.com/vPOYZac2hiE/1920x1080');
+  /* background-color: rgb(255, 255, 255); */
 }
 
 #indicator {
@@ -47,7 +64,7 @@ section:nth-child(4) {
 }
 
 #indicator > div {
-  background-color: white;
+  background-color: #8b8ea2;
   width:10px;
   height:10px;
   border-radius: 5px;
@@ -57,4 +74,32 @@ section:nth-child(4) {
 
 #indicator > div.active {
   transform: scale(1.6);
+}
+
+.engrave { 
+	color: #8b8ea2;
+	text-shadow: 0px 4px 0px rgba(255, 255, 255, 0.3), 0px -2px 0px rgba(31, 35, 44, 0.7);
+}
+
+.fade { 
+	color: #8da0a0;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
 }
