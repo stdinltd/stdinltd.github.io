@@ -69,5 +69,5 @@ footer {
 a { 
 	text-decoration: none; 
 	border-bottom:1px dotted; 
-	color: black;
+	color: inherit;
 }
