@@ -58,6 +58,8 @@ p {
 
 footer {
 	padding: 2rem;
+	color: lightgrey;
+	background-color:#333;
 }
 
 .quote {
