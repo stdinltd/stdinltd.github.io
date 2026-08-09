@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; }
+  body { background: transparent; overflow: hidden; }
+  canvas { display: block; }
+</style>
+</head>
+<body>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
+  }
+}
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { RectAreaLightUniformsLib } from 'three/addons/lights/RectAreaLightUniformsLib.js';
+
+const scene = new THREE.Scene();
+
+const camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 0.01, 1000);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setClearColor(0x000000, 0);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 2.0;
+document.body.appendChild(renderer.domElement);
+
+// Environment map for PBR
+const pmremGenerator = new THREE.PMREMGenerator(renderer);
+const envScene = new THREE.Scene();
+envScene.background = new THREE.Color(0x888888);
+const envLight1 = new THREE.DirectionalLight(0xffffff, 3);
+envLight1.position.set(1, 1, 1);
+envScene.add(envLight1);
+const envLight2 = new THREE.DirectionalLight(0x4488ff, 2);
+envLight2.position.set(-1, 0.5, -1);
+envScene.add(envLight2);
+const envTexture = pmremGenerator.fromScene(envScene).texture;
+pmremGenerator.dispose();
+
+const ambient = new THREE.AmbientLight(0xffffff, 0.3);
+scene.add(ambient);
+
+const dirLight = new THREE.DirectionalLight(0xffffff, 3.0);
+dirLight.position.set(2, 3, 2);
+scene.add(dirLight);
+
+const fillLight = new THREE.DirectionalLight(0xffffff, 1.0);
+fillLight.position.set(-2, 1, -1);
+scene.add(fillLight);
+
+const backLight = new THREE.DirectionalLight(0xffffff, 0.5);
+backLight.position.set(0, 2, -3);
+scene.add(backLight);
+
+const keyLight = new THREE.PointLight(0xffffff, 5.0, 300);
+keyLight.position.set(30, 120, 120);
+scene.add(keyLight);
+
+RectAreaLightUniformsLib.init();
+const screenLight = new THREE.RectAreaLight(0x88aaff, 15.0, 120, 80);
+screenLight.position.set(0, 90, 130);
+screenLight.lookAt(0, 90, 0);
+scene.add(screenLight);
+
+let mixer = null;
+
+const loader = new GLTFLoader();
+loader.load('goat.glb', (gltf) => {
+  const model = gltf.scene;
+  scene.environment = envTexture;
+  scene.add(model);
+
+  const box = new THREE.Box3().setFromObject(model);
+  const center = box.getCenter(new THREE.Vector3());
+  const size = box.getSize(new THREE.Vector3());
+
+  model.position.x -= center.x;
+  model.position.y -= box.min.y;
+  model.position.z -= center.z;
+  model.position.x += size.x * 0.6;
+  model.position.y -= size.y * 0.3;
+
+  camera.position.set(73.945, 75.050, 85.424);
+  camera.lookAt(-4.448, 94.328, 17.879);
+
+  if (gltf.animations.length > 0) {
+    mixer = new THREE.AnimationMixer(model);
+    const action = mixer.clipAction(gltf.animations[0]);
+    action.play();
+  }
+});
+
+// Time-of-day lighting
+function getTimeOfDayLighting() {
+  const now = new Date();
+  const h = now.getHours() + now.getMinutes() / 60;
+
+  if (h >= 6 && h < 18) {
+    // Daytime: bright cool white
+    const t = (h < 12) ? (h - 6) / 6 : (18 - h) / 6;
+    return {
+      ambient: new THREE.Color(0xeef4ff), ambientI: 0.5 + t * 0.5,
+      dir: new THREE.Color(0xffffff), dirI: 4.0 + t * 2.0,
+      fill: new THREE.Color(0xddeeff), fillI: 1.5 + t * 1.0,
+      screen: new THREE.Color(0xaaccff), screenI: 8.0,
+      exposure: 2.2 + t * 0.6,
+    };
+  } else if (h >= 18 && h < 21) {
+    // Evening: warm golden, fading toward night
+    const t = (h - 18) / 3; // 0 at 6pm, 1 at 9pm
+    const col = new THREE.Color().lerpColors(new THREE.Color(0xfff8e0), new THREE.Color(0xffaa44), t);
+    return {
+      ambient: new THREE.Color(0xffffff), ambientI: 0.3 + (1 - t) * 0.3,
+      dir: col, dirI: 2.5 + (1 - t) * 1.5,
+      fill: new THREE.Color(0xe8f0ff), fillI: 0.8 + (1 - t) * 0.5,
+      screen: new THREE.Color(0xffbb77), screenI: 12.0,
+      exposure: 1.8 + (1 - t) * 0.4,
+    };
+  } else {
+    // Night: harsh blue monitor glow
+    return {
+      ambient: new THREE.Color(0x1a2a55), ambientI: 0.1,
+      dir: new THREE.Color(0x5588ff), dirI: 2.5,
+      fill: new THREE.Color(0x4477ee), fillI: 1.2,
+      screen: new THREE.Color(0x6699ff), screenI: 35.0,
+      exposure: 1.5,
+    };
+  }
+}
+
+function applyTimeOfDay() {
+  const l = getTimeOfDayLighting();
+  ambient.color.copy(l.ambient);
+  ambient.intensity = l.ambientI;
+  dirLight.color.copy(l.dir);
+  dirLight.intensity = l.dirI;
+  fillLight.color.copy(l.fill);
+  fillLight.intensity = l.fillI;
+  screenLight.color.copy(l.screen);
+  screenLight.intensity = l.screenI;
+  renderer.toneMappingExposure = l.exposure;
+}
+
+applyTimeOfDay();
+setInterval(applyTimeOfDay, 60000); // update every minute
+
+const clock = new THREE.Clock();
+
+function animate() {
+  requestAnimationFrame(animate);
+  if (mixer) mixer.update(clock.getDelta());
+  renderer.render(scene, camera);
+}
+animate();
+
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+</script>
+</body>
+</html>
