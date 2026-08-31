@@ -95,6 +95,29 @@ body.nav-open {
   }
 }
 
+/* Testimonial carousel */
+.testimonial-slide {
+  display: none;
+  animation: testimonialFade 0.5s ease;
+}
+.testimonial-slide.active {
+  display: block;
+}
+@keyframes testimonialFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.testimonial-dot.active {
+  background: rgba(255, 255, 255, 0.9);
+  transform: scale(1.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-slide {
+    animation: none;
+  }
+}
+
 /* Booking embed responsive container */
 .calendly-container {
   min-height: 700px;

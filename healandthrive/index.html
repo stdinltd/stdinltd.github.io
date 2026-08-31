@@ -161,11 +161,6 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           <!-- Yoga -->
           <div class="service-card bg-white rounded-2xl p-8 shadow-sm border border-sage-100 fade-in text-center">
-            <div class="w-14 h-14 bg-sage-100 rounded-xl flex items-center justify-center mb-5 mx-auto">
-              <svg class="w-7 h-7 text-sage-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 2a3 3 0 100 6 3 3 0 000-6zM4 20l3-8h10l3 8M9 12l3 3 3-3"/>
-              </svg>
-            </div>
             <h3 class="text-xl font-semibold text-sage-800 mb-2">Yoga</h3>
             <p class="text-gray-600 mb-5 leading-relaxed">Gentle and restorative classes for all levels, helping you find balance and inner calm.</p>
             <a href="services.html#yoga" class="text-sage-600 font-medium hover:text-sage-700 transition-colors inline-flex items-center gap-1">
@@ -176,11 +171,6 @@
 
           <!-- Reflexology -->
           <div class="service-card bg-white rounded-2xl p-8 shadow-sm border border-sage-100 fade-in text-center">
-            <div class="w-14 h-14 bg-sage-100 rounded-xl flex items-center justify-center mb-5 mx-auto">
-              <svg class="w-7 h-7 text-sage-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M7 20l3-5m4 5l-3-5m-4 0a4 4 0 118 0m-8 0h8M12 3v4"/>
-              </svg>
-            </div>
             <h3 class="text-xl font-semibold text-sage-800 mb-2">Reflexology</h3>
             <p class="text-gray-600 mb-5 leading-relaxed">Targeted pressure-point therapy to promote healing and deep relaxation throughout the body.</p>
             <a href="services.html#reflexology" class="text-sage-600 font-medium hover:text-sage-700 transition-colors inline-flex items-center gap-1">
@@ -191,11 +181,6 @@
 
           <!-- Massage -->
           <div class="service-card bg-white rounded-2xl p-8 shadow-sm border border-sage-100 fade-in text-center">
-            <div class="w-14 h-14 bg-sage-100 rounded-xl flex items-center justify-center mb-5 mx-auto">
-              <svg class="w-7 h-7 text-sage-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
-              </svg>
-            </div>
             <h3 class="text-xl font-semibold text-sage-800 mb-2">Massage</h3>
             <p class="text-gray-600 mb-5 leading-relaxed">Therapeutic massage to ease tension, reduce stress, and support your body's natural recovery.</p>
             <a href="services.html#massage" class="text-sage-600 font-medium hover:text-sage-700 transition-colors inline-flex items-center gap-1">
@@ -206,11 +191,6 @@
 
           <!-- Therapies -->
           <div class="service-card bg-white rounded-2xl p-8 shadow-sm border border-sage-100 fade-in text-center">
-            <div class="w-14 h-14 bg-sage-100 rounded-xl flex items-center justify-center mb-5 mx-auto">
-              <svg class="w-7 h-7 text-sage-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-            </div>
             <h3 class="text-xl font-semibold text-sage-800 mb-2">Therapies</h3>
             <p class="text-gray-600 mb-5 leading-relaxed">A range of holistic and complementary therapies tailored to your individual needs.</p>
             <a href="services.html#therapies" class="text-sage-600 font-medium hover:text-sage-700 transition-colors inline-flex items-center gap-1">
@@ -257,19 +237,60 @@
 
     <!-- Testimonials -->
     <section class="py-20 sm:py-24 bg-sage-500" aria-labelledby="testimonials-heading">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 id="testimonials-heading" class="text-3xl sm:text-4xl font-serif font-bold text-white mb-12">What Our Clients Say</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <blockquote class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-left fade-in">
-            <p class="text-cream-100 text-lg leading-relaxed mb-6">"The most relaxing experience I've had. The space is beautiful and the team genuinely care about your wellbeing."</p>
-            <footer class="text-cream-200 font-medium">- Sarah M.</footer>
+        <div id="testimonial-carousel" class="relative" aria-live="polite">
+          <blockquote class="testimonial-slide bg-white/10 backdrop-blur-sm rounded-2xl p-8 sm:p-10 text-left active">
+            <p class="text-cream-100 text-lg leading-relaxed mb-6">"From the moment I walked in, I felt completely relaxed and welcomed. The space itself is beautiful, warm, calming, and full of positive energy. Aine is so friendly and caring."</p>
+            <footer class="text-cream-200 font-medium">- Sharon Mc Closkey</footer>
           </blockquote>
 
-          <blockquote class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-left fade-in">
-            <p class="text-cream-100 text-lg leading-relaxed mb-6">"I started yoga classes here and it's completely changed how I manage stress. Can't recommend it enough."</p>
-            <footer class="text-cream-200 font-medium">- James K.</footer>
+          <blockquote class="testimonial-slide bg-white/10 backdrop-blur-sm rounded-2xl p-8 sm:p-10 text-left">
+            <p class="text-cream-100 text-lg leading-relaxed mb-6">"Cannot recommend Aine enough. This place is so much more than just amazing treatments. A real positive energy. You definitely leave feeling so much better than when you arrived."</p>
+            <footer class="text-cream-200 font-medium">- Claire O'Connor</footer>
           </blockquote>
+
+          <blockquote class="testimonial-slide bg-white/10 backdrop-blur-sm rounded-2xl p-8 sm:p-10 text-left">
+            <p class="text-cream-100 text-lg leading-relaxed mb-6">"A hidden gem right in the heart of the community with the community at its heart. An oasis of peace, calm and serenity. I experienced the most fabulous course of reflexology — the benefits are unreal."</p>
+            <footer class="text-cream-200 font-medium">- Keara Agnew</footer>
+          </blockquote>
+
+          <blockquote class="testimonial-slide bg-white/10 backdrop-blur-sm rounded-2xl p-8 sm:p-10 text-left">
+            <p class="text-cream-100 text-lg leading-relaxed mb-6">"Beautiful new setting, warm and inviting. Therapist was attentive to my needs and genuinely a wonderful person. My full body massage was fantastic. I will be back and I would recommend."</p>
+            <footer class="text-cream-200 font-medium">- Fiona Loughran</footer>
+          </blockquote>
+
+          <blockquote class="testimonial-slide bg-white/10 backdrop-blur-sm rounded-2xl p-8 sm:p-10 text-left">
+            <p class="text-cream-100 text-lg leading-relaxed mb-6">"I think this is a little piece of heaven on our doorstep. The peaceful and positive feeling entering the hub was amazing. I had a reflexology treatment and honestly floated leaving the place."</p>
+            <footer class="text-cream-200 font-medium">- Paul Nelson</footer>
+          </blockquote>
+
+          <blockquote class="testimonial-slide bg-white/10 backdrop-blur-sm rounded-2xl p-8 sm:p-10 text-left">
+            <p class="text-cream-100 text-lg leading-relaxed mb-6">"The therapies were so relaxing. Aine created such a safe and comfortable environment which allowed me to fully relax and enjoy the treatments."</p>
+            <footer class="text-cream-200 font-medium">- Hannah Nelson</footer>
+          </blockquote>
+
+          <blockquote class="testimonial-slide bg-white/10 backdrop-blur-sm rounded-2xl p-8 sm:p-10 text-left">
+            <p class="text-cream-100 text-lg leading-relaxed mb-6">"Fantastic facilities and Aine really knows her stuff. The massage was very professional and I left feeling restored. First class experience."</p>
+            <footer class="text-cream-200 font-medium">- Ronnie Orr</footer>
+          </blockquote>
+
+          <blockquote class="testimonial-slide bg-white/10 backdrop-blur-sm rounded-2xl p-8 sm:p-10 text-left">
+            <p class="text-cream-100 text-lg leading-relaxed mb-6">"Aine is a fantastic therapist with a warm personality that makes you feel at ease as soon as you meet her. Would definitely recommend."</p>
+            <footer class="text-cream-200 font-medium">- Sinead Mcgreevy</footer>
+          </blockquote>
+        </div>
+
+        <div class="flex justify-center gap-2 mt-8" aria-label="Testimonial navigation">
+          <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-white/40 transition-all active" data-index="0" aria-label="Review 1"></button>
+          <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-white/40 transition-all" data-index="1" aria-label="Review 2"></button>
+          <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-white/40 transition-all" data-index="2" aria-label="Review 3"></button>
+          <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-white/40 transition-all" data-index="3" aria-label="Review 4"></button>
+          <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-white/40 transition-all" data-index="4" aria-label="Review 5"></button>
+          <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-white/40 transition-all" data-index="5" aria-label="Review 6"></button>
+          <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-white/40 transition-all" data-index="6" aria-label="Review 7"></button>
+          <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-white/40 transition-all" data-index="7" aria-label="Review 8"></button>
         </div>
       </div>
     </section>

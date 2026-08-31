@@ -63,6 +63,40 @@
     });
   }
 
+  // --- Testimonial carousel ---
+  var slides = document.querySelectorAll('.testimonial-slide');
+  var dots = document.querySelectorAll('.testimonial-dot');
+  if (slides.length > 1) {
+    var current = 0;
+    var timer;
+
+    function showSlide(index) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = index;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    function nextSlide() {
+      showSlide((current + 1) % slides.length);
+    }
+
+    function startTimer() {
+      timer = setInterval(nextSlide, 6000);
+    }
+
+    dots.forEach(function (dot) {
+      dot.addEventListener('click', function () {
+        clearInterval(timer);
+        showSlide(parseInt(this.dataset.index));
+        startTimer();
+      });
+    });
+
+    startTimer();
+  }
+
   // --- Active nav link highlight ---
   var currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('nav a, #mobile-nav a').forEach(function (link) {
