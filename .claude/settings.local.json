@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:www.stdin.ltd)",
-      "WebFetch(domain:stdinltd.github.io)"
+      "WebFetch(domain:stdinltd.github.io)",
+      "Bash(gh pages-build:*)",
+      "Bash(gh api:*)",
+      "Bash(gh repo:*)"
     ]
   }
 }

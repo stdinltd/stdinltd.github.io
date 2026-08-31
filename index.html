@@ -6,8 +6,252 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Digital solutions">
 		<meta name="author" content="stdin ltd">
-		<link rel="stylesheet" href="./style.css">
 		<script src="https://kit.fontawesome.com/2fee50bb99.js" crossorigin="anonymous"></script>
+		<style>
+			@font-face {
+				font-family: 'Kefa';
+				src: url('FontsFree-Net-Kefa-Regular-3.ttf');
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				display: flex;
+				flex-direction: column;
+				min-height: 100vh;
+				font-family: "Kefa", "Segoe UI", system-ui, sans-serif;
+				color: #e8e8e8;
+				background: #0a0a0f;
+				-webkit-font-smoothing: antialiased;
+				overflow-x: hidden;
+			}
+
+			body::before,
+			body::after {
+				content: '';
+				position: fixed;
+				border-radius: 50%;
+				filter: blur(120px);
+				opacity: 0.35;
+				pointer-events: none;
+				z-index: 0;
+			}
+
+			body::before {
+				width: 500px;
+				height: 500px;
+				background: #6366f1;
+				top: -10%;
+				left: -8%;
+				animation: drift1 18s ease-in-out infinite alternate;
+			}
+
+			body::after {
+				width: 400px;
+				height: 400px;
+				background: #ec4899;
+				bottom: -5%;
+				right: -5%;
+				animation: drift2 22s ease-in-out infinite alternate;
+			}
+
+			@keyframes drift1 {
+				to { transform: translate(60px, 80px) scale(1.1); }
+			}
+			@keyframes drift2 {
+				to { transform: translate(-50px, -70px) scale(1.15); }
+			}
+
+			.content {
+				flex: 1 0 auto;
+				padding: 2rem 2rem 4rem;
+				margin: 0 auto;
+				max-width: 880px;
+				width: 100%;
+				text-align: center;
+				position: relative;
+				z-index: 1;
+			}
+
+			.hero {
+				padding: 6rem 0 4rem;
+			}
+
+			.hero-icon {
+				font-size: 2.2rem;
+				color: rgba(255, 255, 255, 0.25);
+				margin-bottom: 1.4rem;
+			}
+
+			h1 {
+				font-size: 4rem;
+				font-weight: 700;
+				letter-spacing: -0.03em;
+				background: linear-gradient(135deg, #fff 0%, #a78bfa 50%, #ec4899 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+
+			.tagline {
+				font-size: 0.95rem;
+				color: rgba(255, 255, 255, 0.4);
+				letter-spacing: 0.25em;
+				text-transform: uppercase;
+				font-weight: 400;
+				margin-top: 0.6rem;
+			}
+
+			.divider {
+				width: 50px;
+				height: 1px;
+				background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+				margin: 0 auto 4rem;
+				border: none;
+			}
+
+			h2 {
+				font-size: 1.3rem;
+				font-weight: 500;
+				margin-bottom: 1.4rem;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				color: rgba(255, 255, 255, 0.5);
+			}
+
+			section {
+				margin-bottom: 4rem;
+			}
+
+			#description p {
+				font-size: 1.15rem;
+				line-height: 1.8;
+				color: rgba(255, 255, 255, 0.65);
+				max-width: 580px;
+				margin: 0 auto;
+			}
+
+			.container {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 1.2rem;
+			}
+
+			.quote {
+				background: rgba(255, 255, 255, 0.04);
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				border-radius: 14px;
+				padding: 1.8rem 1.5rem;
+				text-align: left;
+				backdrop-filter: blur(12px);
+				-webkit-backdrop-filter: blur(12px);
+				transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+			}
+
+			.quote:hover {
+				border-color: rgba(167, 139, 250, 0.3);
+				box-shadow: 0 8px 40px rgba(99, 102, 241, 0.1);
+				transform: translateY(-3px);
+			}
+
+			.quote-text {
+				font-size: 0.92rem;
+				line-height: 1.7;
+				color: rgba(255, 255, 255, 0.6);
+				margin-bottom: 1.4rem;
+			}
+
+			.quote-author {
+				font-size: 0.9rem;
+				font-weight: 600;
+				color: rgba(255, 255, 255, 0.85);
+			}
+
+			.quote-location {
+				font-size: 0.8rem;
+				color: rgba(255, 255, 255, 0.3);
+				margin-top: 0.15rem;
+			}
+
+			#contact p {
+				font-size: 1.1rem;
+				color: rgba(255, 255, 255, 0.6);
+			}
+
+			a {
+				color: #a78bfa;
+				text-decoration: none;
+				border-bottom: 1px solid rgba(167, 139, 250, 0.3);
+				transition: border-color 0.3s ease, color 0.3s ease;
+			}
+
+			a:hover {
+				color: #c4b5fd;
+				border-color: #c4b5fd;
+			}
+
+			p {
+				font-size: 1rem;
+			}
+
+			footer {
+				padding: 2.5rem 2rem;
+				color: rgba(255, 255, 255, 0.25);
+				background: rgba(0, 0, 0, 0.4);
+				border-top: 1px solid rgba(255, 255, 255, 0.05);
+				text-align: center;
+				font-size: 0.82rem;
+				line-height: 1.9;
+				position: relative;
+				z-index: 1;
+			}
+
+			@keyframes fadeUp {
+				from { opacity: 0; transform: translateY(20px); }
+				to { opacity: 1; transform: translateY(0); }
+			}
+
+			.hero {
+				animation: fadeUp 0.8s ease-out;
+			}
+
+			section {
+				animation: fadeUp 0.8s ease-out both;
+			}
+
+			#description { animation-delay: 0.15s; }
+			#reviews { animation-delay: 0.3s; }
+			#contact { animation-delay: 0.45s; }
+
+			@media screen and (max-width: 768px) {
+				.container {
+					grid-template-columns: 1fr;
+					gap: 1rem;
+				}
+
+				.hero {
+					padding: 4rem 0 3rem;
+				}
+
+				h1 {
+					font-size: 2.8rem;
+				}
+
+				body::before {
+					width: 300px;
+					height: 300px;
+				}
+
+				body::after {
+					width: 250px;
+					height: 250px;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<div class="content">
