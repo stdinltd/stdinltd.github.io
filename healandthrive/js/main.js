@@ -72,8 +72,10 @@
 
     function showSlide(index) {
       slides[current].classList.remove('active');
+      slides[current].classList.add('hidden');
       dots[current].classList.remove('active');
       current = index;
+      slides[current].classList.remove('hidden');
       slides[current].classList.add('active');
       dots[current].classList.add('active');
     }

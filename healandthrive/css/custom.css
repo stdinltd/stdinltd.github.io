@@ -96,12 +96,8 @@ body.nav-open {
 }
 
 /* Testimonial carousel */
-.testimonial-slide {
-  display: none;
-  animation: testimonialFade 0.5s ease;
-}
 .testimonial-slide.active {
-  display: block;
+  animation: testimonialFade 0.5s ease;
 }
 @keyframes testimonialFade {
   from { opacity: 0; transform: translateY(8px); }
