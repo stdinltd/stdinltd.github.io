@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.stdin.ltd)",
+      "WebFetch(domain:stdinltd.github.io)"
+    ]
+  }
+}
