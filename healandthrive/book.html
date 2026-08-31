@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment - Heal &amp; Thrive</title>
+  <meta name="description" content="Book your yoga, reflexology, massage or therapy appointment at Heal &amp; Thrive Belfast. Choose a time that suits you.">
+  <meta name="theme-color" content="#7C9082">
+  <link rel="canonical" href="https://healandthrive.co.uk/book.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              50: '#F1F5F2', 100: '#D6E4D8', 200: '#B9D1BD', 300: '#99BA9E',
+              400: '#7DA583', 500: '#6B8F72', 600: '#56735B', 700: '#415744',
+              800: '#2C3A2E', 900: '#171E18',
+            },
+            wood: {
+              100: '#F5EDE0', 200: '#E8D5BE', 300: '#D4B896', 400: '#C0A07A',
+              500: '#A0845C', 600: '#8B6F47', 700: '#6B5535', 800: '#4A3B25',
+            },
+            cream: {
+              50: '#FDFCFA', 100: '#FAF8F5', 200: '#F5F0EB', 300: '#EDE5DB',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['Georgia', 'Cambria', 'serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-cream-100 text-gray-800 antialiased">
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ========== HEADER ========== -->
+  <header class="bg-cream-50/95 backdrop-blur-sm sticky top-0 z-50 border-b border-sage-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        <a href="index.html" class="flex items-center gap-3" aria-label="Heal &amp; Thrive home">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 bg-sage-500 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-1.5-1.5-6-6-6-10a6 6 0 0112 0c0 4-4.5 8.5-6 10z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 11a2 2 0 100-4 2 2 0 000 4z"/>
+            </svg>
+          </div>
+          <span class="text-xl sm:text-2xl font-serif font-bold text-sage-700">Heal &amp; Thrive</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+          <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-sage-600 transition-colors">Home</a>
+          <a href="services.html" class="text-sm font-medium text-gray-600 hover:text-sage-600 transition-colors">Services</a>
+          <a href="about.html" class="text-sm font-medium text-gray-600 hover:text-sage-600 transition-colors">About</a>
+          <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-sage-600 transition-colors">Contact</a>
+          <a href="book.html" class="inline-flex items-center px-5 py-2.5 bg-sage-500 text-white text-sm font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2" aria-current="page">Book Now</a>
+        </nav>
+        <button id="menu-btn" class="md:hidden p-2 text-gray-600 hover:text-sage-600" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-nav" class="mobile-nav fixed inset-0 z-50 md:hidden" role="dialog" aria-label="Mobile navigation">
+    <div class="flex items-center justify-between px-4 h-16">
+      <span class="text-xl font-serif font-bold text-sage-700">Heal &amp; Thrive</span>
+      <button id="close-btn" class="p-2 text-gray-600 hover:text-sage-600" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="flex flex-col items-center gap-6 pt-12 text-lg" aria-label="Mobile navigation">
+      <a href="index.html" class="font-medium text-gray-700 hover:text-sage-600 transition-colors">Home</a>
+      <a href="services.html" class="font-medium text-gray-700 hover:text-sage-600 transition-colors">Services</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-sage-600 transition-colors">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-sage-600 transition-colors">Contact</a>
+      <a href="book.html" class="mt-4 inline-flex items-center px-8 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors">Book Now</a>
+    </nav>
+  </div>
+
+  <!-- ========== MAIN ========== -->
+  <main id="main">
+
+    <!-- Page Header -->
+    <section class="bg-sage-500 py-16 sm:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl font-serif font-bold text-white mb-4">Book an Appointment</h1>
+        <p class="max-w-2xl mx-auto text-cream-100 text-lg">Choose a service, pick a time that suits you, and we'll take care of the rest.</p>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-8 sm:py-12 bg-cream-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-wood-100 rounded-2xl p-6 sm:p-8 border border-wood-200">
+          <h2 class="text-lg font-semibold text-sage-800 mb-3">How It Works</h2>
+          <ol class="text-gray-600 space-y-2 list-decimal list-inside">
+            <li>Choose a service below and click "Book &amp; Pay"</li>
+            <li>Enter your details and preferred date/time on the payment page</li>
+            <li>We'll confirm your appointment by email within 24 hours</li>
+          </ol>
+          <p class="text-gray-500 text-sm mt-4">Need help? <a href="contact.html" class="text-sage-600 hover:text-sage-700 underline">Contact us</a> and we'll be happy to assist.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Cards -->
+    <section class="py-12 sm:py-16 bg-cream-50" aria-label="Book a service">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!--
+          Replace each # link below with your Stripe Payment Link URL.
+
+          To create Payment Links in Stripe:
+          1. Go to stripe.com/dashboard > Payment Links > New
+          2. Add your service as a product (e.g. "Yoga Class - £10")
+          3. Under "After payment", add custom fields for "Preferred date" and "Preferred time"
+          4. Copy the link and replace the # href below
+        -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+          <!-- Yoga -->
+          <div class="bg-white rounded-2xl p-8 shadow-sm border border-sage-100 flex flex-col fade-in">
+            <h3 class="text-xl font-semibold text-sage-800 mb-2">Yoga Class</h3>
+            <p class="text-gray-600 leading-relaxed mb-4 flex-grow">Gentle and restorative classes for all levels. Group or 1-to-1 sessions available.</p>
+            <div class="flex items-end justify-between">
+              <div>
+                <p class="text-2xl font-bold text-sage-600">&pound;10</p>
+                <p class="text-gray-500 text-sm">60 min</p>
+              </div>
+              <a href="#" class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+                Book &amp; Pay
+              </a>
+            </div>
+          </div>
+
+          <!-- Reflexology -->
+          <div class="bg-white rounded-2xl p-8 shadow-sm border border-sage-100 flex flex-col fade-in">
+            <h3 class="text-xl font-semibold text-sage-800 mb-2">Reflexology</h3>
+            <p class="text-gray-600 leading-relaxed mb-4 flex-grow">Targeted pressure-point therapy to promote healing and deep relaxation.</p>
+            <div class="flex items-end justify-between">
+              <div>
+                <p class="text-2xl font-bold text-sage-600">&pound;40</p>
+                <p class="text-gray-500 text-sm">60 min</p>
+              </div>
+              <a href="#" class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+                Book &amp; Pay
+              </a>
+            </div>
+          </div>
+
+          <!-- Massage -->
+          <div class="bg-white rounded-2xl p-8 shadow-sm border border-sage-100 flex flex-col fade-in">
+            <h3 class="text-xl font-semibold text-sage-800 mb-2">Massage</h3>
+            <p class="text-gray-600 leading-relaxed mb-4 flex-grow">Therapeutic massage including Swedish, deep tissue, and aromatherapy. Tailored to your needs.</p>
+            <div class="flex items-end justify-between">
+              <div>
+                <p class="text-2xl font-bold text-sage-600">from &pound;35</p>
+                <p class="text-gray-500 text-sm">30 / 60 / 90 min</p>
+              </div>
+              <a href="#" class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+                Book &amp; Pay
+              </a>
+            </div>
+          </div>
+
+          <!-- Therapies -->
+          <div class="bg-white rounded-2xl p-8 shadow-sm border border-sage-100 flex flex-col fade-in">
+            <h3 class="text-xl font-semibold text-sage-800 mb-2">Therapy Session</h3>
+            <p class="text-gray-600 leading-relaxed mb-4 flex-grow">Holistic and complementary therapies with a personalised approach to your wellbeing.</p>
+            <div class="flex items-end justify-between">
+              <div>
+                <p class="text-2xl font-bold text-sage-600">&pound;45</p>
+                <p class="text-gray-500 text-sm">60 min</p>
+              </div>
+              <a href="#" class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+                Book &amp; Pay
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Alternative Contact -->
+    <section class="py-12 sm:py-16 bg-cream-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+        <h2 class="text-2xl font-serif font-bold text-sage-800 mb-4">Prefer to Book by Phone?</h2>
+        <p class="text-gray-600 text-lg mb-6">Give us a call and we'll find the perfect time for you.</p>
+        <a href="tel:+442895680014" class="inline-flex items-center gap-2 px-6 py-3 border-2 border-sage-500 text-sage-700 font-semibold rounded-lg hover:bg-sage-50 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
+          </svg>
+          028 9568 0014
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-sage-800 text-sage-200 py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div>
+          <h3 class="text-xl font-serif font-bold text-white mb-4">Heal &amp; Thrive</h3>
+          <p class="text-sage-300 leading-relaxed">A Belfast-based Community Interest Company supporting mental health and wellbeing.</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-sage-300 hover:text-white transition-colors">Home</a></li>
+            <li><a href="services.html" class="text-sage-300 hover:text-white transition-colors">Services</a></li>
+            <li><a href="about.html" class="text-sage-300 hover:text-white transition-colors">About</a></li>
+            <li><a href="contact.html" class="text-sage-300 hover:text-white transition-colors">Contact</a></li>
+            <li><a href="book.html" class="text-sage-300 hover:text-white transition-colors">Book Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Contact</h4>
+          <ul class="space-y-2 text-sage-300">
+            <li>Unit 22, Dairy Farm Centre,<br>Stewartstown Rd, Dunmurry,<br>Belfast BT17 0AW</li>
+            <li><a href="mailto:hello@healandthrive.co.uk" class="hover:text-white transition-colors">hello@healandthrive.co.uk</a></li>
+            <li><a href="tel:+442895680014" class="hover:text-white transition-colors">028 9568 0014</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Opening Hours</h4>
+          <ul class="space-y-2 text-sage-300">
+            <li>Mon - Fri: 9:30 - 16:30</li>
+            <li>Sat: Closed</li>
+            <li>Sun: Closed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-sage-700 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sage-400 text-sm">&copy; <script>document.write(new Date().getFullYear())</script> Heal &amp; Thrive CIC. All rights reserved.</p>
+        <p class="text-sage-400 text-sm">Community Interest Company promoting wellbeing in Belfast.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

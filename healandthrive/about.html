@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Heal &amp; Thrive</title>
+  <meta name="description" content="Learn about Heal &amp; Thrive, a Belfast Community Interest Company providing wellness services and promoting wellbeing in the community.">
+  <meta name="theme-color" content="#7C9082">
+  <link rel="canonical" href="https://healandthrive.co.uk/about.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              50: '#F1F5F2', 100: '#D6E4D8', 200: '#B9D1BD', 300: '#99BA9E',
+              400: '#7DA583', 500: '#6B8F72', 600: '#56735B', 700: '#415744',
+              800: '#2C3A2E', 900: '#171E18',
+            },
+            wood: {
+              100: '#F5EDE0', 200: '#E8D5BE', 300: '#D4B896', 400: '#C0A07A',
+              500: '#A0845C', 600: '#8B6F47', 700: '#6B5535', 800: '#4A3B25',
+            },
+            cream: {
+              50: '#FDFCFA', 100: '#FAF8F5', 200: '#F5F0EB', 300: '#EDE5DB',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['Georgia', 'Cambria', 'serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-cream-100 text-gray-800 antialiased">
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ========== HEADER ========== -->
+  <header class="bg-cream-50/95 backdrop-blur-sm sticky top-0 z-50 border-b border-sage-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        <a href="index.html" class="flex items-center gap-3" aria-label="Heal &amp; Thrive home">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 bg-sage-500 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-1.5-1.5-6-6-6-10a6 6 0 0112 0c0 4-4.5 8.5-6 10z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 11a2 2 0 100-4 2 2 0 000 4z"/>
+            </svg>
+          </div>
+          <span class="text-xl sm:text-2xl font-serif font-bold text-sage-700">Heal &amp; Thrive</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+          <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-sage-600 transition-colors">Home</a>
+          <a href="services.html" class="text-sm font-medium text-gray-600 hover:text-sage-600 transition-colors">Services</a>
+          <a href="about.html" class="text-sm font-medium text-sage-700 transition-colors" aria-current="page">About</a>
+          <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-sage-600 transition-colors">Contact</a>
+          <a href="book.html" class="inline-flex items-center px-5 py-2.5 bg-sage-500 text-white text-sm font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">Book Now</a>
+        </nav>
+        <button id="menu-btn" class="md:hidden p-2 text-gray-600 hover:text-sage-600" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-nav" class="mobile-nav fixed inset-0 z-50 md:hidden" role="dialog" aria-label="Mobile navigation">
+    <div class="flex items-center justify-between px-4 h-16">
+      <span class="text-xl font-serif font-bold text-sage-700">Heal &amp; Thrive</span>
+      <button id="close-btn" class="p-2 text-gray-600 hover:text-sage-600" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="flex flex-col items-center gap-6 pt-12 text-lg" aria-label="Mobile navigation">
+      <a href="index.html" class="font-medium text-gray-700 hover:text-sage-600 transition-colors">Home</a>
+      <a href="services.html" class="font-medium text-gray-700 hover:text-sage-600 transition-colors">Services</a>
+      <a href="about.html" class="font-medium text-sage-600 transition-colors">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-sage-600 transition-colors">Contact</a>
+      <a href="book.html" class="mt-4 inline-flex items-center px-8 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors">Book Now</a>
+    </nav>
+  </div>
+
+  <!-- ========== MAIN ========== -->
+  <main id="main">
+
+    <!-- Page Header -->
+    <section class="bg-sage-500 py-16 sm:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl font-serif font-bold text-white mb-4">About Heal &amp; Thrive</h1>
+        <p class="max-w-2xl mx-auto text-cream-100 text-lg">A Community Interest Company dedicated to accessible wellness in Belfast.</p>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="py-16 sm:py-24 bg-cream-50" aria-labelledby="mission-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="fade-in">
+            <h2 id="mission-heading" class="text-3xl sm:text-4xl font-serif font-bold text-sage-800 mb-6">Our Mission</h2>
+            <p class="text-gray-600 text-lg leading-relaxed mb-4">
+              Heal &amp; Thrive was founded with a simple belief: that everyone deserves access to care that supports their mental and physical wellbeing.
+            </p>
+            <p class="text-gray-600 text-lg leading-relaxed mb-4">
+              As a Community Interest Company, our purpose goes beyond profit. Every service we provide contributes to our community, and we extend our reach through talks, outreach, and connecting with local mental health organisations.
+            </p>
+            <p class="text-gray-600 text-lg leading-relaxed">
+              We believe that healing happens in a space of trust, warmth, and genuine care. That's what we strive to create - for every person who walks through our door.
+            </p>
+          </div>
+          <div class="fade-in">
+            <div class="aspect-[4/3] bg-sage-200 rounded-2xl flex items-center justify-center">
+              <p class="text-sage-500 text-sm font-medium">Mission/team photo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="py-16 sm:py-24 bg-cream-100" aria-labelledby="values-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14 fade-in">
+          <h2 id="values-heading" class="text-3xl sm:text-4xl font-serif font-bold text-sage-800 mb-4">Our Values</h2>
+          <p class="max-w-xl mx-auto text-gray-600 text-lg">The principles that guide everything we do.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl p-8 shadow-sm border border-sage-100 fade-in">
+            <div class="w-14 h-14 bg-sage-100 rounded-xl flex items-center justify-center mb-5">
+              <svg class="w-7 h-7 text-sage-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-sage-800 mb-2">Compassion</h3>
+            <p class="text-gray-600 leading-relaxed">We meet every person with kindness and empathy, creating a space where you feel truly welcome and understood.</p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-sm border border-sage-100 fade-in">
+            <div class="w-14 h-14 bg-sage-100 rounded-xl flex items-center justify-center mb-5">
+              <svg class="w-7 h-7 text-sage-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-sage-800 mb-2">Community</h3>
+            <p class="text-gray-600 leading-relaxed">As a CIC, we exist to serve our community through wellness services, talks, and connecting with local mental health organisations.</p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-sm border border-sage-100 fade-in">
+            <div class="w-14 h-14 bg-sage-100 rounded-xl flex items-center justify-center mb-5">
+              <svg class="w-7 h-7 text-sage-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-sage-800 mb-2">Accessibility</h3>
+            <p class="text-gray-600 leading-relaxed">We believe wellness should be available to everyone. We strive to keep our services affordable and our space welcoming to all.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Space -->
+    <section class="py-16 sm:py-24 bg-wood-100" aria-labelledby="space-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="grid grid-cols-2 gap-4 fade-in">
+            <div class="aspect-square bg-wood-200 rounded-2xl flex items-center justify-center">
+              <p class="text-wood-500 text-xs font-medium text-center px-2">Interior photo 1</p>
+            </div>
+            <div class="aspect-square bg-wood-200 rounded-2xl flex items-center justify-center">
+              <p class="text-wood-500 text-xs font-medium text-center px-2">Interior photo 2</p>
+            </div>
+            <div class="aspect-square bg-wood-200 rounded-2xl flex items-center justify-center">
+              <p class="text-wood-500 text-xs font-medium text-center px-2">Interior photo 3</p>
+            </div>
+            <div class="aspect-square bg-wood-200 rounded-2xl flex items-center justify-center">
+              <p class="text-wood-500 text-xs font-medium text-center px-2">Interior photo 4</p>
+            </div>
+          </div>
+          <div class="fade-in">
+            <h2 id="space-heading" class="text-3xl sm:text-4xl font-serif font-bold text-sage-800 mb-6">Our Space</h2>
+            <p class="text-gray-600 text-lg leading-relaxed mb-4">
+              Step into Heal &amp; Thrive and feel the difference. Our space has been carefully designed with your comfort in mind - from the warm wooden panelling to the calming sage green tones throughout.
+            </p>
+            <p class="text-gray-600 text-lg leading-relaxed mb-4">
+              Every detail has been considered to create an environment where you can truly relax, from the natural materials to the soft lighting and peaceful atmosphere.
+            </p>
+            <p class="text-gray-600 text-lg leading-relaxed mb-8">
+              Whether you're attending a yoga class, receiving a massage, or simply sitting in our waiting area with a cup of herbal tea, we want you to feel at home.
+            </p>
+            <blockquote class="border-l-4 border-sage-400 pl-6 py-2">
+              <p class="text-2xl font-serif italic text-sage-700">"There is always hope"</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Placeholder -->
+    <section class="py-16 sm:py-24 bg-cream-50" aria-labelledby="team-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14 fade-in">
+          <h2 id="team-heading" class="text-3xl sm:text-4xl font-serif font-bold text-sage-800 mb-4">Our Team</h2>
+          <p class="max-w-xl mx-auto text-gray-600 text-lg">Qualified, caring practitioners dedicated to your wellbeing.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="text-center fade-in">
+            <div class="w-40 h-40 mx-auto bg-sage-200 rounded-full flex items-center justify-center mb-5">
+              <p class="text-sage-500 text-xs font-medium">Photo</p>
+            </div>
+            <h3 class="text-xl font-semibold text-sage-800 mb-1">Practitioner Name</h3>
+            <p class="text-sage-600 font-medium mb-2">Yoga Instructor</p>
+            <p class="text-gray-600 text-sm leading-relaxed max-w-xs mx-auto">Brief bio about this team member and their qualifications.</p>
+          </div>
+
+          <div class="text-center fade-in">
+            <div class="w-40 h-40 mx-auto bg-sage-200 rounded-full flex items-center justify-center mb-5">
+              <p class="text-sage-500 text-xs font-medium">Photo</p>
+            </div>
+            <h3 class="text-xl font-semibold text-sage-800 mb-1">Practitioner Name</h3>
+            <p class="text-sage-600 font-medium mb-2">Massage Therapist</p>
+            <p class="text-gray-600 text-sm leading-relaxed max-w-xs mx-auto">Brief bio about this team member and their qualifications.</p>
+          </div>
+
+          <div class="text-center fade-in">
+            <div class="w-40 h-40 mx-auto bg-sage-200 rounded-full flex items-center justify-center mb-5">
+              <p class="text-sage-500 text-xs font-medium">Photo</p>
+            </div>
+            <h3 class="text-xl font-semibold text-sage-800 mb-1">Practitioner Name</h3>
+            <p class="text-sage-600 font-medium mb-2">Reflexologist</p>
+            <p class="text-gray-600 text-sm leading-relaxed max-w-xs mx-auto">Brief bio about this team member and their qualifications.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 sm:py-20 bg-cream-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-sage-800 mb-4">Come Visit Us</h2>
+        <p class="text-gray-600 text-lg mb-8">We'd love to welcome you to our space. Book an appointment or get in touch.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="book.html" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors text-lg focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">Book Now</a>
+          <a href="contact.html" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border-2 border-sage-500 text-sage-700 font-semibold rounded-lg hover:bg-sage-50 transition-colors text-lg focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-sage-800 text-sage-200 py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div>
+          <h3 class="text-xl font-serif font-bold text-white mb-4">Heal &amp; Thrive</h3>
+          <p class="text-sage-300 leading-relaxed">A Belfast-based Community Interest Company supporting mental health and wellbeing.</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-sage-300 hover:text-white transition-colors">Home</a></li>
+            <li><a href="services.html" class="text-sage-300 hover:text-white transition-colors">Services</a></li>
+            <li><a href="about.html" class="text-sage-300 hover:text-white transition-colors">About</a></li>
+            <li><a href="contact.html" class="text-sage-300 hover:text-white transition-colors">Contact</a></li>
+            <li><a href="book.html" class="text-sage-300 hover:text-white transition-colors">Book Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Contact</h4>
+          <ul class="space-y-2 text-sage-300">
+            <li>Unit 22, Dairy Farm Centre,<br>Stewartstown Rd, Dunmurry,<br>Belfast BT17 0AW</li>
+            <li><a href="mailto:hello@healandthrive.co.uk" class="hover:text-white transition-colors">hello@healandthrive.co.uk</a></li>
+            <li><a href="tel:+442895680014" class="hover:text-white transition-colors">028 9568 0014</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Opening Hours</h4>
+          <ul class="space-y-2 text-sage-300">
+            <li>Mon - Fri: 9:30 - 16:30</li>
+            <li>Sat: Closed</li>
+            <li>Sun: Closed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-sage-700 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sage-400 text-sm">&copy; <script>document.write(new Date().getFullYear())</script> Heal &amp; Thrive CIC. All rights reserved.</p>
+        <p class="text-sage-400 text-sm">Community Interest Company promoting wellbeing in Belfast.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

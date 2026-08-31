@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - Heal &amp; Thrive</title>
+  <meta name="description" content="Explore our wellness services including yoga, reflexology, massage and holistic therapies at Heal &amp; Thrive Belfast.">
+  <meta name="theme-color" content="#7C9082">
+  <link rel="canonical" href="https://healandthrive.co.uk/services.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              50: '#F1F5F2', 100: '#D6E4D8', 200: '#B9D1BD', 300: '#99BA9E',
+              400: '#7DA583', 500: '#6B8F72', 600: '#56735B', 700: '#415744',
+              800: '#2C3A2E', 900: '#171E18',
+            },
+            wood: {
+              100: '#F5EDE0', 200: '#E8D5BE', 300: '#D4B896', 400: '#C0A07A',
+              500: '#A0845C', 600: '#8B6F47', 700: '#6B5535', 800: '#4A3B25',
+            },
+            cream: {
+              50: '#FDFCFA', 100: '#FAF8F5', 200: '#F5F0EB', 300: '#EDE5DB',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['Georgia', 'Cambria', 'serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-cream-100 text-gray-800 antialiased">
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ========== HEADER ========== -->
+  <header class="bg-cream-50/95 backdrop-blur-sm sticky top-0 z-50 border-b border-sage-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        <a href="index.html" class="flex items-center gap-3" aria-label="Heal &amp; Thrive home">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 bg-sage-500 rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-1.5-1.5-6-6-6-10a6 6 0 0112 0c0 4-4.5 8.5-6 10z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 11a2 2 0 100-4 2 2 0 000 4z"/>
+            </svg>
+          </div>
+          <span class="text-xl sm:text-2xl font-serif font-bold text-sage-700">Heal &amp; Thrive</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+          <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-sage-600 transition-colors">Home</a>
+          <a href="services.html" class="text-sm font-medium text-sage-700 transition-colors" aria-current="page">Services</a>
+          <a href="about.html" class="text-sm font-medium text-gray-600 hover:text-sage-600 transition-colors">About</a>
+          <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-sage-600 transition-colors">Contact</a>
+          <a href="book.html" class="inline-flex items-center px-5 py-2.5 bg-sage-500 text-white text-sm font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">Book Now</a>
+        </nav>
+        <button id="menu-btn" class="md:hidden p-2 text-gray-600 hover:text-sage-600" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-nav" class="mobile-nav fixed inset-0 z-50 md:hidden" role="dialog" aria-label="Mobile navigation">
+    <div class="flex items-center justify-between px-4 h-16">
+      <span class="text-xl font-serif font-bold text-sage-700">Heal &amp; Thrive</span>
+      <button id="close-btn" class="p-2 text-gray-600 hover:text-sage-600" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="flex flex-col items-center gap-6 pt-12 text-lg" aria-label="Mobile navigation">
+      <a href="index.html" class="font-medium text-gray-700 hover:text-sage-600 transition-colors">Home</a>
+      <a href="services.html" class="font-medium text-sage-600 transition-colors">Services</a>
+      <a href="about.html" class="font-medium text-gray-700 hover:text-sage-600 transition-colors">About</a>
+      <a href="contact.html" class="font-medium text-gray-700 hover:text-sage-600 transition-colors">Contact</a>
+      <a href="book.html" class="mt-4 inline-flex items-center px-8 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors">Book Now</a>
+    </nav>
+  </div>
+
+  <!-- ========== MAIN ========== -->
+  <main id="main">
+
+    <!-- Page Header -->
+    <section class="bg-sage-500 py-16 sm:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl font-serif font-bold text-white mb-4">Our Services</h1>
+        <p class="max-w-2xl mx-auto text-cream-100 text-lg">Holistic treatments designed to restore balance, ease tension, and support your mental and physical wellbeing.</p>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-16 sm:py-24 bg-cream-50" aria-label="Services list">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Yoga -->
+        <div id="yoga" class="scroll-mt-24 mb-16 fade-in">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div class="aspect-[3/2] bg-sage-200 rounded-2xl flex items-center justify-center order-2 lg:order-1">
+              <p class="text-sage-500 text-sm font-medium">Yoga class photo</p>
+            </div>
+            <div class="order-1 lg:order-2">
+              <h2 class="text-3xl font-serif font-bold text-sage-800 mb-4">Yoga</h2>
+              <p class="text-gray-600 text-lg leading-relaxed mb-4">
+                Our yoga classes are designed for all levels, from complete beginners to experienced practitioners. In a warm, supportive environment, you'll learn gentle postures, breathing techniques, and mindfulness practices.
+              </p>
+              <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                Whether you're looking to improve flexibility, reduce stress, or simply find a quiet moment in your week, our classes offer something for everyone.
+              </p>
+              <div class="flex flex-wrap gap-3 mb-6">
+                <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">60 min session</span>
+                <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">All levels</span>
+                <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">Group &amp; 1-to-1</span>
+              </div>
+              <a href="book.html" class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+                Book a Yoga Class
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-sage-100 mb-16">
+
+        <!-- Reflexology -->
+        <div id="reflexology" class="scroll-mt-24 mb-16 fade-in">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 class="text-3xl font-serif font-bold text-sage-800 mb-4">Reflexology</h2>
+              <p class="text-gray-600 text-lg leading-relaxed mb-4">
+                Reflexology is a therapeutic technique that applies targeted pressure to specific points on the feet, hands, and ears. These points correspond to different organs and systems in the body.
+              </p>
+              <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                By stimulating these reflex points, we help promote natural healing, improve circulation, and encourage deep relaxation. Many clients find it particularly beneficial for stress, headaches, and sleep difficulties.
+              </p>
+              <div class="flex flex-wrap gap-3 mb-6">
+                <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">45 - 60 min</span>
+                <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">Deeply relaxing</span>
+                <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">1-to-1 session</span>
+              </div>
+              <a href="book.html" class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+                Book Reflexology
+              </a>
+            </div>
+            <div class="aspect-[3/2] bg-sage-200 rounded-2xl flex items-center justify-center">
+              <p class="text-sage-500 text-sm font-medium">Reflexology photo</p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-sage-100 mb-16">
+
+        <!-- Massage -->
+        <div id="massage" class="scroll-mt-24 mb-16 fade-in">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div class="aspect-[3/2] bg-sage-200 rounded-2xl flex items-center justify-center order-2 lg:order-1">
+              <p class="text-sage-500 text-sm font-medium">Massage therapy photo</p>
+            </div>
+            <div class="order-1 lg:order-2">
+              <h2 class="text-3xl font-serif font-bold text-sage-800 mb-4">Massage</h2>
+              <p class="text-gray-600 text-lg leading-relaxed mb-4">
+                Our massage therapists offer a range of techniques including Swedish, deep tissue, and aromatherapy massage. Each session is tailored to your individual needs.
+              </p>
+              <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                Whether you're carrying tension from desk work, recovering from an injury, or simply need time to unwind, therapeutic massage can help ease pain, improve mobility, and restore a sense of calm.
+              </p>
+              <div class="flex flex-wrap gap-3 mb-6">
+                <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">30 / 60 / 90 min</span>
+                <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">Multiple styles</span>
+                <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">1-to-1 session</span>
+              </div>
+              <a href="book.html" class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+                Book a Massage
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-sage-100 mb-16">
+
+        <!-- Therapies -->
+        <div id="therapies" class="scroll-mt-24 mb-8 fade-in">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 class="text-3xl font-serif font-bold text-sage-800 mb-4">Holistic Therapies</h2>
+              <p class="text-gray-600 text-lg leading-relaxed mb-4">
+                We offer a variety of complementary and holistic therapies designed to support your overall health and wellbeing. Our practitioners work with you to create a personalised treatment plan.
+              </p>
+              <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                Our holistic approach addresses mind, body, and spirit - helping you manage stress, build resilience, and develop lasting wellness habits.
+              </p>
+              <div class="flex flex-wrap gap-3 mb-6">
+                <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">Personalised plans</span>
+                <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">Qualified practitioners</span>
+                <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">Confidential</span>
+              </div>
+              <a href="book.html" class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+                Book a Therapy Session
+              </a>
+            </div>
+            <div class="aspect-[3/2] bg-sage-200 rounded-2xl flex items-center justify-center">
+              <p class="text-sage-500 text-sm font-medium">Therapy room photo</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Pricing Overview -->
+    <section class="py-16 sm:py-20 bg-cream-100" aria-labelledby="pricing-heading">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+        <h2 id="pricing-heading" class="text-3xl sm:text-4xl font-serif font-bold text-sage-800 mb-4">Pricing</h2>
+        <p class="text-gray-600 text-lg mb-10">Transparent, affordable pricing. No hidden fees.</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-sage-100">
+            <h3 class="text-lg font-semibold text-sage-800 mb-2">Yoga Class</h3>
+            <p class="text-3xl font-bold text-sage-600 mb-1">&pound;10</p>
+            <p class="text-gray-500 text-sm">per class (60 min)</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-sage-100">
+            <h3 class="text-lg font-semibold text-sage-800 mb-2">Reflexology</h3>
+            <p class="text-3xl font-bold text-sage-600 mb-1">&pound;40</p>
+            <p class="text-gray-500 text-sm">per session (60 min)</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-sage-100">
+            <h3 class="text-lg font-semibold text-sage-800 mb-2">Massage</h3>
+            <p class="text-3xl font-bold text-sage-600 mb-1">&pound;35</p>
+            <p class="text-gray-500 text-sm">from (30 min)</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-sage-100">
+            <h3 class="text-lg font-semibold text-sage-800 mb-2">Therapy</h3>
+            <p class="text-3xl font-bold text-sage-600 mb-1">&pound;45</p>
+            <p class="text-gray-500 text-sm">per session (60 min)</p>
+          </div>
+        </div>
+
+        <p class="text-gray-500 text-sm mt-6">Prices are indicative. Exact pricing shown during booking.</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 sm:py-20 bg-wood-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-sage-800 mb-4">Ready to Feel Better?</h2>
+        <p class="text-gray-600 text-lg mb-8">Choose a service and book your appointment today.</p>
+        <a href="book.html" class="inline-flex items-center px-8 py-4 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors text-lg shadow-md focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">Book Now</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-sage-800 text-sage-200 py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div>
+          <h3 class="text-xl font-serif font-bold text-white mb-4">Heal &amp; Thrive</h3>
+          <p class="text-sage-300 leading-relaxed">A Belfast-based Community Interest Company supporting mental health and wellbeing.</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-sage-300 hover:text-white transition-colors">Home</a></li>
+            <li><a href="services.html" class="text-sage-300 hover:text-white transition-colors">Services</a></li>
+            <li><a href="about.html" class="text-sage-300 hover:text-white transition-colors">About</a></li>
+            <li><a href="contact.html" class="text-sage-300 hover:text-white transition-colors">Contact</a></li>
+            <li><a href="book.html" class="text-sage-300 hover:text-white transition-colors">Book Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Contact</h4>
+          <ul class="space-y-2 text-sage-300">
+            <li>Unit 22, Dairy Farm Centre,<br>Stewartstown Rd, Dunmurry,<br>Belfast BT17 0AW</li>
+            <li><a href="mailto:hello@healandthrive.co.uk" class="hover:text-white transition-colors">hello@healandthrive.co.uk</a></li>
+            <li><a href="tel:+442895680014" class="hover:text-white transition-colors">028 9568 0014</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Opening Hours</h4>
+          <ul class="space-y-2 text-sage-300">
+            <li>Mon - Fri: 9:30 - 16:30</li>
+            <li>Sat: Closed</li>
+            <li>Sun: Closed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-sage-700 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sage-400 text-sm">&copy; <script>document.write(new Date().getFullYear())</script> Heal &amp; Thrive CIC. All rights reserved.</p>
+        <p class="text-sage-400 text-sm">Community Interest Company promoting wellbeing in Belfast.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
