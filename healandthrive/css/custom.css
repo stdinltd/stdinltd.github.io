@@ -13,23 +13,29 @@
 /* Golden glow page titles */
 .page-title-glow {
   font-family: 'Great Vibes', cursive;
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 400;
   color: #1E4D26;
-  -webkit-text-stroke: 2px rgba(255, 255, 255, 1);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
   paint-order: stroke fill;
   text-shadow:
-    0 0 10px rgba(255, 255, 255, 1),
-    0 0 20px rgba(255, 250, 210, 1),
-    0 0 40px rgba(240, 220, 140, 0.9),
-    0 0 60px rgba(230, 210, 120, 0.8),
-    0 0 90px rgba(220, 195, 100, 0.6),
-    0 0 130px rgba(210, 185, 90, 0.4),
-    0 0 180px rgba(200, 175, 80, 0.25);
+    0 0 6px rgba(255, 255, 255, 1),
+    0 0 12px rgba(255, 250, 210, 0.8),
+    0 0 25px rgba(240, 220, 140, 0.5),
+    0 0 40px rgba(230, 210, 120, 0.3);
 }
 @media (min-width: 640px) {
   .page-title-glow {
     font-size: 5.5rem;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 1);
+    text-shadow:
+      0 0 10px rgba(255, 255, 255, 1),
+      0 0 20px rgba(255, 250, 210, 1),
+      0 0 40px rgba(240, 220, 140, 0.9),
+      0 0 60px rgba(230, 210, 120, 0.8),
+      0 0 90px rgba(220, 195, 100, 0.6),
+      0 0 130px rgba(210, 185, 90, 0.4),
+      0 0 180px rgba(200, 175, 80, 0.25);
   }
 }
 
