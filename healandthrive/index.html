@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Heal &amp; Thrive - Wellness Centre Belfast</title>
-  <meta name="description" content="Heal &amp; Thrive is a Belfast-based Community Interest Company offering yoga, reflexology, massage, and therapy services. Book your appointment today.">
-  <meta name="theme-color" content="#7C9082">
+  <title>Heal &amp; Thrive - Wellness Hub Belfast</title>
+  <meta name="description" content="Heal &amp; Thrive CIC is a community-led wellness hub in Belfast offering reflexology, acupuncture, and Swedish massage. Supporting people through holistic therapies.">
+  <meta name="theme-color" content="#2F773E">
   <link rel="canonical" href="https://healandthrive.co.uk/">
   <!-- Open Graph -->
-  <meta property="og:title" content="Heal &amp; Thrive - Wellness Centre Belfast">
-  <meta property="og:description" content="Yoga, reflexology, massage and therapy in a calm, welcoming Belfast space. A Community Interest Company promoting wellbeing.">
+  <meta property="og:title" content="Heal &amp; Thrive Wellness Hub - Belfast">
+  <meta property="og:description" content="Reflexology, acupuncture and Swedish massage in a calm, welcoming Belfast space. A Community Interest Company supporting people through holistic therapies.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://healandthrive.co.uk/">
+  <!-- Google Fonts: Lora (body) + Playfair Display (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <!-- Tailwind CSS (Play CDN - replace with build output for production) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -20,37 +24,41 @@
         extend: {
           colors: {
             sage: {
-              50:  '#F1F5F2',
-              100: '#D6E4D8',
-              200: '#B9D1BD',
-              300: '#99BA9E',
-              400: '#7DA583',
-              500: '#6B8F72',
-              600: '#56735B',
-              700: '#415744',
-              800: '#2C3A2E',
-              900: '#171E18',
+              50:  '#F4F7F4',
+              100: '#E0EBE0',
+              200: '#C5D3C3',
+              300: '#A8B5A2',
+              400: '#7D9A80',
+              500: '#5A8060',
+              600: '#3D6B44',
+              700: '#2F773E',
+              800: '#1E4D26',
+              900: '#122414',
             },
-            wood: {
-              100: '#F5EDE0',
-              200: '#E8D5BE',
-              300: '#D4B896',
-              400: '#C0A07A',
-              500: '#A0845C',
-              600: '#8B6F47',
-              700: '#6B5535',
-              800: '#4A3B25',
+            taupe: {
+              50:  '#F5F1EC',
+              100: '#E8DED2',
+              200: '#D8CCBC',
+              300: '#C8B8A6',
+              400: '#B8A890',
+              500: '#A0927A',
+            },
+            gold: {
+              300: '#D4C88C',
+              400: '#C4B46E',
+              500: '#B5A064',
+              600: '#9A8852',
             },
             cream: {
-              50:  '#FDFCFA',
-              100: '#FAF8F5',
-              200: '#F5F0EB',
-              300: '#EDE5DB',
+              50:  '#FDFCF9',
+              100: '#F4F1EA',
+              200: '#EDE8DF',
+              300: '#E4DDD2',
             },
           },
           fontFamily: {
-            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-            serif: ['Georgia', 'Cambria', 'serif'],
+            sans: ['Lora', 'Georgia', 'Cambria', 'serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'Cambria', 'serif'],
           },
         },
       },
@@ -64,27 +72,20 @@
   <a href="#main" class="skip-link">Skip to main content</a>
 
   <!-- ========== HEADER / NAV ========== -->
-  <header class="bg-cream-50/95 backdrop-blur-sm sticky top-0 z-50 border-b border-sage-100">
+  <header class="sticky top-0 z-50 border-b border-sage-100" style="background-color: #fdfcfb">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 sm:h-20">
+      <div class="flex items-center justify-between h-28 sm:h-40">
         <!-- Logo -->
-        <a href="index.html" class="flex items-center gap-3" aria-label="Heal &amp; Thrive home">
-          <!-- Replace with actual logo image -->
-          <div class="w-10 h-10 sm:w-12 sm:h-12 bg-sage-500 rounded-full flex items-center justify-center">
-            <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-1.5-1.5-6-6-6-10a6 6 0 0112 0c0 4-4.5 8.5-6 10z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 11a2 2 0 100-4 2 2 0 000 4z"/>
-            </svg>
-          </div>
-          <span class="text-xl sm:text-2xl font-serif font-bold text-sage-700">Heal &amp; Thrive</span>
+        <a href="index.html" class="flex items-center" aria-label="Heal &amp; Thrive home">
+          <img src="images/logo.png" alt="Heal &amp; Thrive Wellness Hub" class="h-24 sm:h-36 w-auto">
         </a>
 
         <!-- Desktop Nav -->
         <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
-          <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-sage-600 transition-colors">Home</a>
-          <a href="services.html" class="text-sm font-medium text-gray-600 hover:text-sage-600 transition-colors">Services</a>
-          <a href="about.html" class="text-sm font-medium text-gray-600 hover:text-sage-600 transition-colors">About</a>
-          <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-sage-600 transition-colors">Contact</a>
+          <a href="index.html" class="text-lg font-medium text-gray-600 hover:text-sage-600 transition-colors">Home</a>
+          <a href="services.html" class="text-lg font-medium text-gray-600 hover:text-sage-600 transition-colors">Services</a>
+          <a href="about.html" class="text-lg font-medium text-gray-600 hover:text-sage-600 transition-colors">About</a>
+          <a href="contact.html" class="text-lg font-medium text-gray-600 hover:text-sage-600 transition-colors">Contact</a>
           <a href="book.html" class="inline-flex items-center px-5 py-2.5 bg-sage-500 text-white text-sm font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
             Book Now
           </a>
@@ -126,26 +127,23 @@
   <main id="main">
 
     <!-- Hero Section -->
-    <section class="relative min-h-[85vh] sm:min-h-[90vh] flex items-center">
-      <!-- Background with gradient overlay (replace with photo background) -->
-      <div class="absolute inset-0 hero-overlay"></div>
-      <div class="absolute inset-0 bg-[url('images/hero-bg.jpg')] bg-cover bg-center mix-blend-overlay opacity-30"></div>
+    <section class="relative min-h-[85vh] sm:min-h-[90vh] flex items-center overflow-hidden">
+      <!-- Background image -->
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/hero-signage.png')"></div>
+      <!-- Dark overlay for contrast -->
+      <div class="absolute inset-0 bg-black/30"></div>
 
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-6 hero-text-shadow">
-          Nurture Your Mind,<br>
-          <span class="text-cream-200">Restore Your Body</span>
-        </h1>
-        <p class="max-w-2xl mx-auto text-lg sm:text-xl text-cream-100 mb-10 leading-relaxed hero-text-shadow">
-          A calm, welcoming space in Belfast offering yoga, reflexology, massage, and holistic therapies. A Community Interest Company promoting wellbeing.
-        </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="book.html" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white text-sage-700 font-semibold rounded-lg hover:bg-cream-200 transition-colors text-lg shadow-lg focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sage-500">
-            Book an Appointment
-          </a>
-          <a href="services.html" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors text-lg focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sage-500">
-            Our Services
-          </a>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[60vh] sm:pt-[65vh] pb-10 text-center">
+        <!-- Frosted glass panel pinned to bottom -->
+        <div class="inline-block bg-white/15 backdrop-blur-md rounded-2xl px-8 sm:px-12 py-6 sm:py-8 border border-white/20 shadow-2xl">
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="book.html" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 bg-white text-sage-700 font-semibold rounded-lg hover:bg-cream-200 transition-colors text-lg shadow-lg focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sage-500">
+              Book an Appointment
+            </a>
+            <a href="services.html" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors text-lg focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sage-500">
+              Our Services
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -154,21 +152,11 @@
     <section class="py-20 sm:py-24 bg-cream-50" aria-labelledby="services-heading">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-14 fade-in">
-          <h2 id="services-heading" class="text-3xl sm:text-4xl font-serif font-bold text-sage-800 mb-4">Our Services</h2>
+          <h2 id="services-heading" class="text-3xl sm:text-4xl font-serif font-bold text-sage-800 mb-4 gold-accent">Our Services</h2>
           <p class="max-w-xl mx-auto text-gray-600 text-lg">Holistic treatments tailored to your wellbeing, delivered in a warm and calming environment.</p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          <!-- Yoga -->
-          <div class="service-card bg-white rounded-2xl p-8 shadow-sm border border-sage-100 fade-in text-center">
-            <h3 class="text-xl font-semibold text-sage-800 mb-2">Yoga</h3>
-            <p class="text-gray-600 mb-5 leading-relaxed">Gentle and restorative classes for all levels, helping you find balance and inner calm.</p>
-            <a href="services.html#yoga" class="text-sage-600 font-medium hover:text-sage-700 transition-colors inline-flex items-center gap-1">
-              Learn more
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8">
           <!-- Reflexology -->
           <div class="service-card bg-white rounded-2xl p-8 shadow-sm border border-sage-100 fade-in text-center">
             <h3 class="text-xl font-semibold text-sage-800 mb-2">Reflexology</h3>
@@ -179,21 +167,21 @@
             </a>
           </div>
 
-          <!-- Massage -->
+          <!-- Acupuncture -->
           <div class="service-card bg-white rounded-2xl p-8 shadow-sm border border-sage-100 fade-in text-center">
-            <h3 class="text-xl font-semibold text-sage-800 mb-2">Massage</h3>
-            <p class="text-gray-600 mb-5 leading-relaxed">Therapeutic massage to ease tension, reduce stress, and support your body's natural recovery.</p>
-            <a href="services.html#massage" class="text-sage-600 font-medium hover:text-sage-700 transition-colors inline-flex items-center gap-1">
+            <h3 class="text-xl font-semibold text-sage-800 mb-2">Acupuncture</h3>
+            <p class="text-gray-600 mb-5 leading-relaxed">Traditional acupuncture to restore balance, relieve pain, and support your body's natural healing.</p>
+            <a href="services.html#acupuncture" class="text-sage-600 font-medium hover:text-sage-700 transition-colors inline-flex items-center gap-1">
               Learn more
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </a>
           </div>
 
-          <!-- Therapies -->
+          <!-- Swedish Massage -->
           <div class="service-card bg-white rounded-2xl p-8 shadow-sm border border-sage-100 fade-in text-center">
-            <h3 class="text-xl font-semibold text-sage-800 mb-2">Therapies</h3>
-            <p class="text-gray-600 mb-5 leading-relaxed">A range of holistic and complementary therapies tailored to your individual needs.</p>
-            <a href="services.html#therapies" class="text-sage-600 font-medium hover:text-sage-700 transition-colors inline-flex items-center gap-1">
+            <h3 class="text-xl font-semibold text-sage-800 mb-2">Swedish Massage</h3>
+            <p class="text-gray-600 mb-5 leading-relaxed">Therapeutic massage to ease tension, reduce stress, and support your body's natural recovery.</p>
+            <a href="services.html#massage" class="text-sage-600 font-medium hover:text-sage-700 transition-colors inline-flex items-center gap-1">
               Learn more
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </a>
@@ -208,22 +196,22 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <!-- Image placeholder -->
           <div class="fade-in">
-            <div class="aspect-[4/3] bg-sage-200 rounded-2xl flex items-center justify-center">
-              <p class="text-sage-500 text-sm font-medium">Interior photo placeholder</p>
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden">
+              <img src="images/healing-space.png" alt="Heal &amp; Thrive wellness space with yoga mats and calming decor" class="w-full h-full object-cover">
             </div>
           </div>
 
           <!-- Text -->
           <div class="fade-in">
-            <h2 id="about-heading" class="text-3xl sm:text-4xl font-serif font-bold text-sage-800 mb-6">A Space for Healing</h2>
+            <h2 id="about-heading" class="text-3xl sm:text-4xl font-serif font-bold text-sage-800 mb-6 gold-accent">A Space for Healing</h2>
             <p class="text-gray-600 text-lg leading-relaxed mb-4">
-              Heal &amp; Thrive is a Community Interest Company in Belfast, created to provide accessible wellness services in a calm, nurturing environment.
+              Heal &amp; Thrive CIC is a community-led organisation created to support people in real distress through access to holistic therapies such as reflexology, acupuncture, and Swedish massage.
             </p>
             <p class="text-gray-600 text-lg leading-relaxed mb-4">
-              Our space features warm wooden panelling and calming sage tones, designed to put you at ease from the moment you walk through the door.
+              We're committed to ensuring that people who may never normally have access to holistic therapies can experience them in a safe, trauma-informed, and dignified way.
             </p>
             <p class="text-gray-600 text-lg leading-relaxed mb-8">
-              As a CIC, we're committed to promoting wellbeing in our community through talks, outreach, and connecting with local mental health organisations.
+              There is so much healing happening at Heal &amp; Thrive Wellness Hub. Every day, we see the positive impact our work is having on the people who walk through our doors.
             </p>
             <div class="text-center lg:text-left">
               <a href="about.html" class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
@@ -305,7 +293,7 @@
     </section>
 
     <!-- CTA Banner -->
-    <section class="py-16 sm:py-20 bg-wood-100" aria-labelledby="cta-heading">
+    <section class="py-16 sm:py-20 bg-taupe-50" aria-labelledby="cta-heading">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
         <h2 id="cta-heading" class="text-3xl sm:text-4xl font-serif font-bold text-sage-800 mb-4">Ready to Start Your Journey?</h2>
         <p class="text-gray-600 text-lg mb-8">Book your first appointment and take the first step towards a calmer, healthier you.</p>
@@ -323,7 +311,7 @@
         <!-- Brand -->
         <div>
           <h3 class="text-xl font-serif font-bold text-white mb-4">Heal &amp; Thrive</h3>
-          <p class="text-sage-300 leading-relaxed">A Belfast-based Community Interest Company supporting mental health and wellbeing.</p>
+          <p class="text-sage-300 leading-relaxed">A community-led organisation in Belfast supporting people through holistic therapies.</p>
         </div>
 
         <!-- Quick Links -->
@@ -361,7 +349,7 @@
 
       <div class="mt-12 pt-8 border-t border-sage-700 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p class="text-sage-400 text-sm">&copy; <script>document.write(new Date().getFullYear())</script> Heal &amp; Thrive CIC. All rights reserved.</p>
-        <p class="text-sage-400 text-sm">Community Interest Company promoting wellbeing in Belfast.</p>
+        <p class="text-sage-400 text-sm">Heal &amp; Thrive Wellness Hub, Dairy Farm Centre, Belfast.</p>
       </div>
     </div>
   </footer>

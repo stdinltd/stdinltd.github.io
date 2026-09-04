@@ -99,6 +99,7 @@
     startTimer();
   }
 
+
   // --- Active nav link highlight ---
   var currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('nav a, #mobile-nav a').forEach(function (link) {

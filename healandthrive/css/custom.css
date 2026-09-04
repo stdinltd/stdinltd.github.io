@@ -1,5 +1,28 @@
 /* Heal & Thrive - Custom styles beyond Tailwind */
 
+/* Golden glow page titles */
+.page-title-glow {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  font-weight: 400;
+  color: #1E4D26;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.95);
+  paint-order: stroke fill;
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 1),
+    0 0 15px rgba(255, 245, 200, 0.9),
+    0 0 30px rgba(230, 210, 120, 0.8),
+    0 0 50px rgba(220, 195, 100, 0.6),
+    0 0 80px rgba(210, 185, 90, 0.4),
+    0 0 120px rgba(200, 175, 80, 0.25),
+    0 0 160px rgba(200, 175, 80, 0.15);
+}
+@media (min-width: 640px) {
+  .page-title-glow {
+    font-size: 5.5rem;
+  }
+}
+
 /* Smooth scroll for anchor links */
 html {
   scroll-behavior: smooth;
@@ -12,7 +35,7 @@ html {
   left: 0;
   z-index: 100;
   padding: 0.75rem 1.5rem;
-  background: #7C9082;
+  background: #2F773E;
   color: #fff;
   font-weight: 600;
   transition: top 0.2s;
@@ -23,7 +46,7 @@ html {
 
 /* Focus ring for keyboard navigation */
 *:focus-visible {
-  outline: 3px solid #7C9082;
+  outline: 3px solid #2F773E;
   outline-offset: 2px;
 }
 
@@ -32,7 +55,7 @@ html {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  background: #FDFCFA; /* hardcoded cream-50, not dependent on Tailwind CDN */
+  background: #FDFCF9; /* hardcoded cream-50, not dependent on Tailwind CDN */
 }
 .mobile-nav.open {
   visibility: visible;
@@ -49,15 +72,6 @@ body.nav-open {
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* Hero gradient overlay */
-.hero-overlay {
-  background: linear-gradient(
-    135deg,
-    rgba(107, 143, 114, 0.92) 0%,
-    rgba(153, 186, 158, 0.85) 50%,
-    rgba(185, 209, 189, 0.78) 100%
-  );
-}
 
 /* Service card hover */
 .service-card {
@@ -112,6 +126,20 @@ body.nav-open {
   .testimonial-slide {
     animation: none;
   }
+}
+
+/* Gold accent underline (matches brand signage) */
+.gold-accent {
+  display: inline-block;
+  position: relative;
+}
+.gold-accent::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #B5A064;
+  margin: 0.5rem auto 0;
 }
 
 /* Booking embed responsive container */

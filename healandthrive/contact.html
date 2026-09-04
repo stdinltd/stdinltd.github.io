@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Heal &amp; Thrive</title>
   <meta name="description" content="Get in touch with Heal &amp; Thrive Belfast. Find our address, opening hours, and send us a message.">
-  <meta name="theme-color" content="#7C9082">
+  <meta name="theme-color" content="#2F773E">
   <link rel="canonical" href="https://healandthrive.co.uk/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -14,21 +17,24 @@
         extend: {
           colors: {
             sage: {
-              50: '#F1F5F2', 100: '#D6E4D8', 200: '#B9D1BD', 300: '#99BA9E',
-              400: '#7DA583', 500: '#6B8F72', 600: '#56735B', 700: '#415744',
-              800: '#2C3A2E', 900: '#171E18',
+              50: '#F4F7F4', 100: '#E0EBE0', 200: '#C5D3C3', 300: '#A8B5A2',
+              400: '#7D9A80', 500: '#5A8060', 600: '#3D6B44', 700: '#2F773E',
+              800: '#1E4D26', 900: '#122414',
             },
-            wood: {
-              100: '#F5EDE0', 200: '#E8D5BE', 300: '#D4B896', 400: '#C0A07A',
-              500: '#A0845C', 600: '#8B6F47', 700: '#6B5535', 800: '#4A3B25',
+            taupe: {
+              50: '#F5F1EC', 100: '#E8DED2', 200: '#D8CCBC', 300: '#C8B8A6',
+              400: '#B8A890', 500: '#A0927A',
+            },
+            gold: {
+              300: '#D4C88C', 400: '#C4B46E', 500: '#B5A064', 600: '#9A8852',
             },
             cream: {
-              50: '#FDFCFA', 100: '#FAF8F5', 200: '#F5F0EB', 300: '#EDE5DB',
+              50: '#FDFCF9', 100: '#F4F1EA', 200: '#EDE8DF', 300: '#E4DDD2',
             },
           },
           fontFamily: {
-            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-            serif: ['Georgia', 'Cambria', 'serif'],
+            sans: ['Lora', 'Georgia', 'Cambria', 'serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'Cambria', 'serif'],
           },
         },
       },
@@ -41,24 +47,18 @@
   <a href="#main" class="skip-link">Skip to main content</a>
 
   <!-- ========== HEADER ========== -->
-  <header class="bg-cream-50/95 backdrop-blur-sm sticky top-0 z-50 border-b border-sage-100">
+  <header class="sticky top-0 z-50 border-b border-sage-100" style="background-color: #fdfcfb">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 sm:h-20">
-        <a href="index.html" class="flex items-center gap-3" aria-label="Heal &amp; Thrive home">
-          <div class="w-10 h-10 sm:w-12 sm:h-12 bg-sage-500 rounded-full flex items-center justify-center">
-            <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-1.5-1.5-6-6-6-10a6 6 0 0112 0c0 4-4.5 8.5-6 10z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 11a2 2 0 100-4 2 2 0 000 4z"/>
-            </svg>
-          </div>
-          <span class="text-xl sm:text-2xl font-serif font-bold text-sage-700">Heal &amp; Thrive</span>
+      <div class="flex items-center justify-between h-28 sm:h-40">
+        <a href="index.html" class="flex items-center" aria-label="Heal &amp; Thrive home">
+          <img src="images/logo.png" alt="Heal &amp; Thrive Wellness Hub" class="h-24 sm:h-36 w-auto">
         </a>
         <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
-          <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-sage-600 transition-colors">Home</a>
-          <a href="services.html" class="text-sm font-medium text-gray-600 hover:text-sage-600 transition-colors">Services</a>
-          <a href="about.html" class="text-sm font-medium text-gray-600 hover:text-sage-600 transition-colors">About</a>
-          <a href="contact.html" class="text-sm font-medium text-sage-700 transition-colors" aria-current="page">Contact</a>
-          <a href="book.html" class="inline-flex items-center px-5 py-2.5 bg-sage-500 text-white text-sm font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">Book Now</a>
+          <a href="index.html" class="text-lg font-medium text-gray-600 hover:text-sage-600 transition-colors">Home</a>
+          <a href="services.html" class="text-lg font-medium text-gray-600 hover:text-sage-600 transition-colors">Services</a>
+          <a href="about.html" class="text-lg font-medium text-gray-600 hover:text-sage-600 transition-colors">About</a>
+          <a href="contact.html" class="text-lg font-medium text-sage-700 transition-colors" aria-current="page">Contact</a>
+          <a href="book.html" class="inline-flex items-center px-5 py-2.5 bg-sage-500 text-white text-base font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">Book Now</a>
         </nav>
         <button id="menu-btn" class="md:hidden p-2 text-gray-600 hover:text-sage-600" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -89,7 +89,7 @@
     <!-- Page Header -->
     <section class="bg-sage-500 py-16 sm:py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl sm:text-5xl font-serif font-bold text-white mb-4">Contact Us</h1>
+        <h1 class="page-title-glow mb-4">Contact Us</h1>
         <p class="max-w-2xl mx-auto text-cream-100 text-lg">We'd love to hear from you. Get in touch or drop by our space in Belfast.</p>
       </div>
     </section>
@@ -202,10 +202,10 @@
                   <option value="">Select a topic</option>
                   <option value="General enquiry">General enquiry</option>
                   <option value="Booking question">Booking question</option>
-                  <option value="Yoga classes">Yoga classes</option>
                   <option value="Reflexology">Reflexology</option>
-                  <option value="Massage">Massage</option>
-                  <option value="Therapies">Therapies</option>
+                  <option value="Acupuncture">Acupuncture</option>
+                  <option value="Swedish Massage">Swedish Massage</option>
+                  <option value="Reflexology &amp; Acupuncture offer">Reflexology &amp; Acupuncture offer</option>
                   <option value="Other">Other</option>
                 </select>
               </div>
@@ -246,7 +246,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
           <h3 class="text-xl font-serif font-bold text-white mb-4">Heal &amp; Thrive</h3>
-          <p class="text-sage-300 leading-relaxed">A Belfast-based Community Interest Company supporting mental health and wellbeing.</p>
+          <p class="text-sage-300 leading-relaxed">A community-led organisation in Belfast supporting people through holistic therapies.</p>
         </div>
         <div>
           <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Quick Links</h4>
@@ -277,7 +277,7 @@
       </div>
       <div class="mt-12 pt-8 border-t border-sage-700 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p class="text-sage-400 text-sm">&copy; <script>document.write(new Date().getFullYear())</script> Heal &amp; Thrive CIC. All rights reserved.</p>
-        <p class="text-sage-400 text-sm">Community Interest Company promoting wellbeing in Belfast.</p>
+        <p class="text-sage-400 text-sm">Heal &amp; Thrive Wellness Hub, Dairy Farm Centre, Belfast.</p>
       </div>
     </div>
   </footer>
