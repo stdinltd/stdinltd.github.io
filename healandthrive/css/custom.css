@@ -1,12 +1,22 @@
 /* Heal & Thrive - Custom styles beyond Tailwind */
 
+/* Selima font */
+@font-face {
+  font-family: 'Selima';
+  src: url('fonts/Selima.woff2') format('woff2'),
+       url('fonts/Selima.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Golden glow page titles */
 .page-title-glow {
   font-family: 'Great Vibes', cursive;
   font-size: 4rem;
   font-weight: 400;
   color: #1E4D26;
-  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.95);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.95);
   paint-order: stroke fill;
   text-shadow:
     0 0 8px rgba(255, 255, 255, 1),
@@ -21,6 +31,11 @@
   .page-title-glow {
     font-size: 5.5rem;
   }
+}
+
+/* Hero background sizing */
+.hero-bg {
+  background-size: cover;
 }
 
 /* Smooth scroll for anchor links */

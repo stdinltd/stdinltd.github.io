@@ -74,7 +74,7 @@
   <!-- ========== HEADER / NAV ========== -->
   <header class="sticky top-0 z-50 border-b border-sage-100" style="background-color: #fdfcfb">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-28 sm:h-40">
+      <div class="flex items-center justify-center md:justify-between h-28 sm:h-40 relative">
         <!-- Logo -->
         <a href="index.html" class="flex items-center" aria-label="Heal &amp; Thrive home">
           <img src="images/logo.png" alt="Heal &amp; Thrive Wellness Hub" class="h-24 sm:h-36 w-auto">
@@ -92,7 +92,7 @@
         </nav>
 
         <!-- Mobile menu button -->
-        <button id="menu-btn" class="md:hidden p-2 text-gray-600 hover:text-sage-600" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <button id="menu-btn" class="md:hidden absolute right-0 p-2 text-gray-600 hover:text-sage-600" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
@@ -104,9 +104,11 @@
 
   <!-- Mobile Nav Overlay -->
   <div id="mobile-nav" class="mobile-nav fixed inset-0 z-50 md:hidden" role="dialog" aria-label="Mobile navigation">
-    <div class="flex items-center justify-between px-4 h-16">
-      <span class="text-xl font-serif font-bold text-sage-700">Heal &amp; Thrive</span>
-      <button id="close-btn" class="p-2 text-gray-600 hover:text-sage-600" aria-label="Close menu">
+    <div class="flex items-center justify-center px-4 h-28 relative">
+      <a href="index.html" aria-label="Heal &amp; Thrive home">
+        <img src="images/logo.png" alt="Heal &amp; Thrive Wellness Hub" class="h-24 w-auto">
+      </a>
+      <button id="close-btn" class="absolute right-4 p-2 text-gray-600 hover:text-sage-600" aria-label="Close menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
         </svg>
@@ -127,24 +129,19 @@
   <main id="main">
 
     <!-- Hero Section -->
-    <section class="relative min-h-[85vh] sm:min-h-[90vh] flex items-center overflow-hidden">
-      <!-- Background image -->
-      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/hero-signage.png')"></div>
-      <!-- Dark overlay for contrast -->
-      <div class="absolute inset-0 bg-black/30"></div>
+    <section style="background-color: #ecdcda" class="flex justify-center">
+      <img src="images/hero-signage.png" alt="Heal &amp; Thrive Wellness Hub signage" class="w-full h-auto block">
+    </section>
 
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[60vh] sm:pt-[65vh] pb-10 text-center">
-        <!-- Frosted glass panel pinned to bottom -->
-        <div class="inline-block bg-white/15 backdrop-blur-md rounded-2xl px-8 sm:px-12 py-6 sm:py-8 border border-white/20 shadow-2xl">
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="book.html" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 bg-white text-sage-700 font-semibold rounded-lg hover:bg-cream-200 transition-colors text-lg shadow-lg focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sage-500">
-              Book an Appointment
-            </a>
-            <a href="services.html" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors text-lg focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sage-500">
-              Our Services
-            </a>
-          </div>
-        </div>
+    <!-- CTA -->
+    <section class="bg-cream-50 py-8 text-center">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="book.html" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors text-lg shadow-lg focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+          Book an Appointment
+        </a>
+        <a href="services.html" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 border-2 border-sage-500 text-sage-700 font-semibold rounded-lg hover:bg-sage-50 transition-colors text-lg focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+          Our Services
+        </a>
       </div>
     </section>
 

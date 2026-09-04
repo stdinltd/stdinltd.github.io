@@ -49,7 +49,7 @@
   <!-- ========== HEADER ========== -->
   <header class="sticky top-0 z-50 border-b border-sage-100" style="background-color: #fdfcfb">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-28 sm:h-40">
+      <div class="flex items-center justify-center md:justify-between h-28 sm:h-40 relative">
         <a href="index.html" class="flex items-center" aria-label="Heal &amp; Thrive home">
           <img src="images/logo.png" alt="Heal &amp; Thrive Wellness Hub" class="h-24 sm:h-36 w-auto">
         </a>
@@ -60,7 +60,7 @@
           <a href="contact.html" class="text-lg font-medium text-sage-700 transition-colors" aria-current="page">Contact</a>
           <a href="book.html" class="inline-flex items-center px-5 py-2.5 bg-sage-500 text-white text-base font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">Book Now</a>
         </nav>
-        <button id="menu-btn" class="md:hidden p-2 text-gray-600 hover:text-sage-600" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <button id="menu-btn" class="md:hidden absolute right-0 p-2 text-gray-600 hover:text-sage-600" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
@@ -68,9 +68,11 @@
   </header>
 
   <div id="mobile-nav" class="mobile-nav fixed inset-0 z-50 md:hidden" role="dialog" aria-label="Mobile navigation">
-    <div class="flex items-center justify-between px-4 h-16">
-      <span class="text-xl font-serif font-bold text-sage-700">Heal &amp; Thrive</span>
-      <button id="close-btn" class="p-2 text-gray-600 hover:text-sage-600" aria-label="Close menu">
+    <div class="flex items-center justify-center px-4 h-28 relative">
+      <a href="index.html" aria-label="Heal &amp; Thrive home">
+        <img src="images/logo.png" alt="Heal &amp; Thrive Wellness Hub" class="h-24 w-auto">
+      </a>
+      <button id="close-btn" class="absolute right-4 p-2 text-gray-600 hover:text-sage-600" aria-label="Close menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
