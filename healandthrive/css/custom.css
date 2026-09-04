@@ -160,8 +160,15 @@ body.nav-open {
 
 /* Gold accent underline (matches brand signage) */
 .gold-accent {
-  display: inline-block;
+  display: block;
+  text-align: center;
   position: relative;
+}
+@media (min-width: 640px) {
+  .gold-accent {
+    display: inline-block;
+    text-align: inherit;
+  }
 }
 .gold-accent::after {
   content: '';
