@@ -40,7 +40,7 @@
       },
     }
   </script>
-  <link rel="stylesheet" href="css/custom.css?v=3">
+  <link rel="stylesheet" href="css/custom.css?v=10">
 </head>
 <body class="bg-cream-100 text-gray-800 antialiased">
 
@@ -89,7 +89,7 @@
   <main id="main">
 
     <!-- Page Header -->
-    <section class="bg-sage-500 py-16 sm:py-20">
+    <section class="bg-sage-500 py-16 sm:py-20 green-textured">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="page-title-glow mb-4">Our Services</h1>
         <p class="max-w-2xl mx-auto text-cream-100 text-lg">Reflexology and massage therapies to restore balance, ease tension, and support your wellbeing.</p>
@@ -119,9 +119,9 @@
                 <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">Deeply relaxing</span>
                 <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">1-to-1 session</span>
               </div>
-              <a href="book.html" class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+              <button data-cal-link="healandthrive/reflexology" data-cal-config='{"layout":"month_view","theme":"light","locale":"en","hour12":true}' class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
                 Book Reflexology
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -144,9 +144,9 @@
                 <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">Tension relief</span>
                 <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">1-to-1 session</span>
               </div>
-              <a href="book.html" class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+              <button data-cal-link="healandthrive/full-body-massage" data-cal-config='{"layout":"month_view","theme":"light","locale":"en","hour12":true}' class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
                 Book Full Body Massage
-              </a>
+              </button>
             </div>
             <div class="aspect-[3/2] rounded-2xl overflow-hidden">
               <img src="images/swedish-massage.png" alt="Full body massage treatment - therapist working on client's back" class="w-full h-full object-cover">
@@ -175,9 +175,9 @@
                 <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">Targeted relief</span>
                 <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">1-to-1 session</span>
               </div>
-              <a href="book.html" class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+              <button data-cal-link="healandthrive/half-body-massage" data-cal-config='{"layout":"month_view","theme":"light","locale":"en","hour12":true}' class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
                 Book Half Body Massage
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -200,9 +200,9 @@
                 <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">Stress relief</span>
                 <span class="px-4 py-1.5 bg-sage-100 text-sage-700 text-sm font-medium rounded-full">1-to-1 session</span>
               </div>
-              <a href="book.html" class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+              <button data-cal-link="healandthrive/head-neck-shoulders" data-cal-config='{"layout":"month_view","theme":"light","locale":"en","hour12":true}' class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
                 Book Head, Neck &amp; Shoulders
-              </a>
+              </button>
             </div>
             <div class="aspect-[3/2] rounded-2xl overflow-hidden">
               <img src="images/head-neck-shoulders.png" alt="Head, neck and shoulders massage treatment" class="w-full h-full object-cover">
@@ -290,6 +290,19 @@
       </div>
     </div>
   </footer>
+
+  <!-- Cal.com Popup Embed Script -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+
+    Cal("init", {origin:"https://app.cal.com"});
+
+    Cal("ui", {
+      theme: "light",
+      styles: { branding: { brandColor: "#5A8060" } },
+      hideEventTypeDetails: false
+    });
+  </script>
 
   <script src="js/main.js"></script>
 </body>

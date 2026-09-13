@@ -40,7 +40,7 @@
       },
     }
   </script>
-  <link rel="stylesheet" href="css/custom.css?v=3">
+  <link rel="stylesheet" href="css/custom.css?v=10">
 </head>
 <body class="bg-cream-100 text-gray-800 antialiased">
 
@@ -89,40 +89,16 @@
   <main id="main">
 
     <!-- Page Header -->
-    <section class="bg-sage-500 py-16 sm:py-20">
+    <section class="bg-sage-500 py-16 sm:py-20 green-textured">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="page-title-glow mb-4">Book an Appointment</h1>
         <p class="max-w-2xl mx-auto text-cream-100 text-lg">Choose a service, pick a time that suits you, and we'll take care of the rest.</p>
       </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="py-8 sm:py-12 bg-cream-50">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-taupe-50 rounded-2xl p-6 sm:p-8 border border-taupe-100">
-          <h2 class="text-lg font-semibold text-sage-800 mb-3">How It Works</h2>
-          <ol class="text-gray-600 space-y-2 list-decimal list-inside">
-            <li>Choose a service below and click "Book"</li>
-            <li>Enter your details and preferred date/time on the payment page</li>
-            <li>We'll confirm your appointment by email within 24 hours</li>
-          </ol>
-          <p class="text-gray-500 text-sm mt-4">Need help? <a href="contact.html" class="text-sage-600 hover:text-sage-700 underline">Contact us</a> and we'll be happy to assist.</p>
-        </div>
-      </div>
-    </section>
-
     <!-- Service Cards -->
     <section class="py-12 sm:py-16 bg-cream-50" aria-label="Book a service">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!--
-          Replace each # link below with your Stripe Payment Link URL.
-
-          To create Payment Links in Stripe:
-          1. Go to stripe.com/dashboard > Payment Links > New
-          2. Add your service as a product (e.g. "Yoga Class - £10")
-          3. Under "After payment", add custom fields for "Preferred date" and "Preferred time"
-          4. Copy the link and replace the # href below
-        -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
           <!-- Reflexology -->
@@ -134,9 +110,9 @@
                 <p class="text-2xl font-bold text-sage-600">&pound;45 <span class="text-base font-normal text-gray-500">/ &pound;50</span></p>
                 <p class="text-gray-500 text-sm">45 min / 60 min</p>
               </div>
-              <a href="#" class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+              <button data-cal-link="healandthrive/reflexology" data-cal-config='{"layout":"month_view","theme":"light","locale":"en","hour12":true}' class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
                 Book
-              </a>
+              </button>
             </div>
           </div>
 
@@ -149,9 +125,9 @@
                 <p class="text-2xl font-bold text-sage-600">&pound;45 <span class="text-base font-normal text-gray-500">/ &pound;50</span></p>
                 <p class="text-gray-500 text-sm">45 min / 60 min</p>
               </div>
-              <a href="#" class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+              <button data-cal-link="healandthrive/full-body-massage" data-cal-config='{"layout":"month_view","theme":"light","locale":"en","hour12":true}' class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
                 Book
-              </a>
+              </button>
             </div>
           </div>
 
@@ -164,9 +140,9 @@
                 <p class="text-2xl font-bold text-sage-600">&pound;45 <span class="text-base font-normal text-gray-500">/ &pound;50</span></p>
                 <p class="text-gray-500 text-sm">45 min / 60 min</p>
               </div>
-              <a href="#" class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+              <button data-cal-link="healandthrive/half-body-massage" data-cal-config='{"layout":"month_view","theme":"light","locale":"en","hour12":true}' class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
                 Book
-              </a>
+              </button>
             </div>
           </div>
 
@@ -179,9 +155,9 @@
                 <p class="text-2xl font-bold text-sage-600">&pound;45 <span class="text-base font-normal text-gray-500">/ &pound;50</span></p>
                 <p class="text-gray-500 text-sm">45 min / 60 min</p>
               </div>
-              <a href="#" class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+              <button data-cal-link="healandthrive/head-neck-shoulders" data-cal-config='{"layout":"month_view","theme":"light","locale":"en","hour12":true}' class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
                 Book
-              </a>
+              </button>
             </div>
           </div>
 
@@ -195,15 +171,29 @@
                 <p class="text-2xl font-bold text-sage-600">&pound;70</p>
                 <p class="text-gray-500 text-sm">60 min combined</p>
               </div>
-              <a href="#" class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
+              <button data-cal-link="healandthrive/reflexology-acupuncture" data-cal-config='{"layout":"month_view","theme":"light","locale":"en","hour12":true}' class="inline-flex items-center px-6 py-3 bg-sage-500 text-white font-semibold rounded-lg hover:bg-sage-600 transition-colors focus:ring-2 focus:ring-sage-300 focus:ring-offset-2">
                 Book
-              </a>
+              </button>
             </div>
           </div>
 
         </div>
+        <p class="text-center text-gray-500 text-sm mt-8">Need help booking? <a href="contact.html" class="text-sage-600 hover:text-sage-700 underline">Contact us</a> and we'll be happy to assist.</p>
       </div>
     </section>
+
+    <!-- Cal.com Popup Embed Script -->
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+
+      Cal("init", {origin:"https://app.cal.com"});
+
+      Cal("ui", {
+        theme: "light",
+        styles: { branding: { brandColor: "#5A8060" } },
+        hideEventTypeDetails: false
+      });
+    </script>
 
     <!-- Alternative Contact -->
     <section class="py-12 sm:py-16 bg-cream-100">
