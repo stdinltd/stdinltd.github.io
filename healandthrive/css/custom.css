@@ -33,6 +33,15 @@
   }
 }
 
+/* Hero subtitle text outline for legibility */
+.hero-subtitle {
+  text-shadow:
+    -1px -1px 0 rgba(100, 100, 100, 0.5),
+     1px -1px 0 rgba(100, 100, 100, 0.5),
+    -1px  1px 0 rgba(100, 100, 100, 0.5),
+     1px  1px 0 rgba(100, 100, 100, 0.5);
+}
+
 /* Hero background sizing */
 .hero-bg {
   background-size: cover;
